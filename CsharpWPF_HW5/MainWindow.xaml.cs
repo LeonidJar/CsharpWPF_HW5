@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CsharpWPF_HW5
 {
@@ -20,11 +8,11 @@ namespace CsharpWPF_HW5
     /// </summary>
     public partial class MainWindow : Window
     {
-        Calculator calculator;
+        CalculatorExceptions calculator;
         public MainWindow()
         {
             InitializeComponent();
-            calculator = new Calculator();
+            calculator = new CalculatorExceptions();
             calculator.Result += Calculator_Result;
         }
 
@@ -38,7 +26,7 @@ namespace CsharpWPF_HW5
             if (InputText.Text == string.Empty)
                 Environment.Exit(0);
 
-            bool flag = int.TryParse(InputText.Text, out int value);
+            bool flag = float.TryParse(InputText.Text, out float value);
 
             string name = (e.Source as FrameworkElement).Name;
 

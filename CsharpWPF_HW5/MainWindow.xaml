@@ -7,14 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Name="Add" Click="Button_Click" Content="Плюс" HorizontalAlignment="Left" Margin="316,333,0,0" VerticalAlignment="Top"/>
-        <Button Name="Sub" Click="Button_Click" Content="Минус" HorizontalAlignment="Left" Margin="355,333,0,0" VerticalAlignment="Top"/>
-        <Button Name="Mult" Click="Button_Click" Content="Умножить" HorizontalAlignment="Left" Margin="400,333,0,0" VerticalAlignment="Top"/>
-        <Button Name="Div" Click="Button_Click" Content="Разделить" HorizontalAlignment="Left" Margin="465,333,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="InputText" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="316,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208"/>
-        <Label Name="Answer" Content="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="316,257,0,0" VerticalAlignment="Top" Width="208"/>
-        <Button Name="Cancel" Click="Button_Click" Content="Предыдущее значение" HorizontalAlignment="Left" Margin="529,260,0,0" VerticalAlignment="Top"/>
-        <Button Name="Exit" Click="Button_Click" Content="Выход" HorizontalAlignment="Left" Margin="401,371,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" Grid.Row="1" Name="Add" Click="Button_Click" Content="Плюс" HorizontalAlignment="Center" VerticalAlignment="Center" Height="49" Width="84"/>
+        <Button Grid.Column="1" Grid.Row="1" Name="Sub" Click="Button_Click" Content="Минус" HorizontalAlignment="Center" VerticalAlignment="Center" Height="48" Width="104"/>
+        <Button Grid.Column="2" Grid.Row="1" Name="Mult" Click="Button_Click" Content="Умножить" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" Width="98"/>
+        <Button Grid.Column="3" Grid.Row="1" Name="Div" Click="Button_Click" Content="Разделить" HorizontalAlignment="Center" VerticalAlignment="Center" Height="48" Width="104"/>
+        <TextBox Name="InputText" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,60,0,60" TextWrapping="Wrap" Width="180"/>
+        <Label Grid.Column="1" Name="Answer" Content="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180"/>
+        <Button Grid.Column="3" Name="Cancel" Click="Button_Click" Content="Предыдущее значение" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44" RenderTransformOrigin="0.5,0.5" Width="142"/>
+        <Button Grid.Column="3" Grid.Row="2" Name="Exit" Click="Button_Click" Content="Выход" HorizontalAlignment="Center" VerticalAlignment="Center" Height="46" Width="104"/>
 
     </Grid>
 </Window>
